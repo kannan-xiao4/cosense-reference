@@ -1,0 +1,21 @@
+{
+  "name": "cosense-sites-mcp",
+  "version": "0.1.0",
+  "private": true,
+  "type": "module",
+  "description": "Cosense MCP reference implementation for owner-private OpenAI Sites",
+  "license": "MIT",
+  "engines": {
+    "node": ">=24"
+  },
+  "scripts": {
+    "test": "node --experimental-strip-types --test tests/*.test.mjs",
+    "typecheck": "tsc --noEmit",
+    "build": "node scripts/build.mjs",
+    "check:public": "node scripts/check-public.mjs",
+    "check": "npm test && npm run typecheck && npm run build && node scripts/smoke-build.mjs && npm run check:public"
+  },
+  "devDependencies": {
+    "typescript": "5.9.3"
+  }
+}
