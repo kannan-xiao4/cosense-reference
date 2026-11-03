@@ -2,7 +2,7 @@
 
 Cosense（旧Scrapbox）の記録を、ChatGPTから検索・参照・編集するための参考実装です。OpenAIのSitesが提供する非公開ホスティング・認証・専用プラグイン連携を使い、サーバー処理をCloudflare Workersで動かします。
 
-**現在は公開前レビュー用です。** 実際の個人用SiteからMCP部分を取り出し、プロジェクト名の設定化、書き込みの明示的な有効化、独立したビルドとテストを追加しています。元のSiteのGit履歴・識別子・PAT・個人データは含めていません。
+プロジェクト名は環境変数で設定し、書き込みは明示的に有効化できます。個人用SiteのMCP部分を元に、独立したビルドとテストを備えた参考実装として整理しています。
 
 ## どのコードを読むか
 
@@ -15,7 +15,7 @@ Cosense（旧Scrapbox）の記録を、ChatGPTから検索・参照・編集す�
 | `.openai/hosting.example.json` | Sites用の設定例。実SiteのIDは含まない |
 | `docs/architecture.md` | Sites・Workers・自作コードの役割と設計 |
 | `docs/sites-setup.md` | 自分用に再現する手順とChatGPTへの依頼例 |
-| `docs/publication-review.md` | 公開前に確認する内容と確認済みの範囲 |
+| `docs/verification.md` | 自動テストと実接続で確認した範囲 |
 
 ## できること
 
@@ -54,4 +54,4 @@ npm run check
 
 Cosense APIの呼び方と操作体系は、公式の [helpfeel/cosense-cli](https://github.com/helpfeel/cosense-cli) v1.18.0を参考にしています。CLI自体は実行・同梱していません。OpenAIのSitesスターターや管理用ヘルパーも再配布していません。
 
-この参考実装のライセンス案はMITです。[LICENSE](LICENSE) を確認してください。GitHubでの公開は、所有者による内容確認後に行う想定です。
+MITライセンスです。詳細は [LICENSE](LICENSE) を参照してください。
